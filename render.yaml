@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: nightscout
+    runtime: docker
+    plan: free
+    envVars:
+      - key: API_SECRET
+        sync: false
+      - key: MONGODB_URI
+        sync: false
+      - key: DISPLAY_UNITS
+        value: mmol
+      - key: ENABLE
+        value: careportal basal dbsize
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 1337
